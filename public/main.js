@@ -1,8 +1,7 @@
-<script>
-    const socketio = io();
-    const form = document.getElementById("form");
-    const input = document.getElementById("msg");
-    const chats = document.getElementById("chats");
+const socketio = io();
+const form = document.getElementById("form");
+const input = document.getElementById("msg");
+const chats = document.getElementById("chats");
 
     const nameForm = document.getElementById("nameForm");
 　　const userName = document.getElementById("userName");
