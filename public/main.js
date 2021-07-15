@@ -5,8 +5,10 @@
     const chats = document.getElementById("chats");
 
     form.addEventListener('submit', function(event){
+     if(input.value!==''){
       socketio.emit('message', input.value);
       input.value='';
+     }
       event.preventDefault();
     })
     socketio.on('message',function(msg){
