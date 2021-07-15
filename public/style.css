@@ -37,12 +37,33 @@ button
 #chats
 {
     font-size:5vw;
-    margin:0;
-    padding: 0;
-    text-indent: 0;
-}
-#chats li 
+
+#chats dt
 {
-    margin-left:1em;
-    text-indent: 0;
+    margin: 2vw 0;
+    border:1px solid #333;
+    border-radius:3vw;
+    padding:1vw 3vw;
+    display: inline-block;
 }
+#chats dt+dd
+{
+    margin-left: 8vw;
+    position: relative;
+    background-color:#ccc;
+    border-radius:3vw;
+    padding:1vw 3vw;
+}
+#chats dt+dd::before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -6vw;
+    margin-top: -7vw;
+    border: 3vw solid transparent;
+    border-right: 8vw solid #ccc;
+    transform: rotate(40deg);
+    z-index: -1;
+}  
