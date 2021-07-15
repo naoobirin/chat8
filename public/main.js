@@ -33,8 +33,19 @@ nameForm.addEventListener('submit', function(event){
     })
 
     socketio.on('message',function(msg){
-      const li = document
-      li.append(msg.msg + '(' + msg.nameForm
-      chats.append(li);
+      displayMessage(msg);
     });
-    /</script>
+
+    //参加時に過去のメッセージを受け取る
+    socketio.on('signin',function(msgs){
+      for(let i=0;i<msgs.length;i++){
+        const msg = msgs[i];
+        displayMessage(msg);
+      }
+    });
+
+    function displayMessage(msg){
+      const li = document.createElement("li");
+      li.append(msg.msg + '(' + msg.nameForm)
+      chats.append(li);
+  }
