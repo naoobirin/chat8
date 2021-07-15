@@ -3,12 +3,17 @@
     box-sizing: border-box;
 }
 h1 {
-     text-align: center 
-     
-       }
+    text-align: center;
+    background-color: rgb(45, 87, 155);
+    color: #fff;
+    font-size: 5vw; 
+}
 form {
     display: flex;
 }
+#form {
+     display: none;
+}     
 input,
 button
 {
