@@ -18,7 +18,7 @@ io.on('connection',function(socket){
         socket.on('message',function(msg){
             message.push(msg); //メッセージを配列に追加
             message=message.slice(-100); // 最新の100件だけ保存
-            to.emit('message', msg);
+            io.emit('message', msg);
         });
  
     });
